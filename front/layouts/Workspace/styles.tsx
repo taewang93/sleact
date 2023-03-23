@@ -24,22 +24,18 @@ export const ProfileImg = styled.img`
 export const ProfileModal = styled.div`
   display: flex;
   padding: 20px;
-
   & img {
     display: flex;
   }
-
   & > div {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
   }
-
   & #profile-name {
     font-weight: bold;
     display: inline-flex;
   }
-
   & #profile-active {
     font-size: 13px;
     display: inline-flex;
@@ -83,7 +79,6 @@ export const Channels = styled.nav`
   background: #3f0e40;
   color: rgb(188, 171, 188);
   vertical-align: top;
-
   & a {
     padding-left: 36px;
     color: inherit;
@@ -92,17 +87,14 @@ export const Channels = styled.nav`
     line-height: 28px;
     display: flex;
     align-items: center;
-
     &.selected {
       color: white;
     }
   }
-
   & .bold {
     color: white;
     font-weight: bold;
   }
-
   & .count {
     margin-left: auto;
     background: #cd2553;
@@ -116,7 +108,6 @@ export const Channels = styled.nav`
     color: white;
     margin-right: 16px;
   }
-
   & h2 {
     height: 36px;
     line-height: 36px;
@@ -156,11 +147,9 @@ export const MenuScroll = styled.div`
 
 export const WorkspaceModal = styled.div`
   padding: 10px 0 0;
-
   & h2 {
     padding-left: 20px;
   }
-
   & > button {
     width: 100%;
     height: 28px;
@@ -169,7 +158,6 @@ export const WorkspaceModal = styled.div`
     background: transparent;
     border-top: 1px solid rgb(28, 29, 28);
     cursor: pointer;
-
     &:last-of-type {
       border-bottom: 1px solid rgb(28, 29, 28);
     }

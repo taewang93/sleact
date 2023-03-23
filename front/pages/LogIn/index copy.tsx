@@ -23,8 +23,8 @@ const LogIn = () => {
             withCredentials: true,
           },
         )
-        .then((response) => {
-          mutate(response.data, false);
+        .then(() => {
+          // mutate();
         })
         .catch((error) => {
           setLogInError(error.response?.data?.code === 401);
@@ -32,8 +32,6 @@ const LogIn = () => {
     },
     [email, password, ],
   );
-
-    console.log(data);
 
   if(data) {
     return <Redirect to="/workspace/channel" />
