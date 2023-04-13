@@ -4,7 +4,7 @@ import { Container, Header } from "./styles";
 const Channel = () => {
   return (
     <Container>
-      <Header>header</Header>
+      <Header>channel</Header>
     </Container>
   )
 }

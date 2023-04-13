@@ -7,7 +7,7 @@ import { Link, Redirect } from 'react-router-dom';
 import useSWR from 'swr';
 
 const LogIn = () => {
-  const {data, error, mutate} = useSWR('http://localhost:3095/api/users', fetcher);
+  const {data: userData, error, mutate} = useSWR('http://localhost:3095/api/users', fetcher);
   const [logInError, setLogInError] = useState(false);
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
@@ -24,17 +24,19 @@ const LogIn = () => {
           },
         )
         .then(() => {
-          // mutate();
+          mutate();
         })
         .catch((error) => {
           setLogInError(error.response?.data?.code === 401);
         });
     },
-    [email, password, ],
+    [email, password, mutate],
   );
 
-  if(data) {
-    return <Redirect to="/workspace/channel" />
+    console.log(userData);
+
+  if(userData) {
+    return <Redirect to="/workspace/sleact/channel/일반" />;
   }
 
   // console.log(error, userData);
